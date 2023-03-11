@@ -1,0 +1,31 @@
+{%extends 'base.html'%}
+{%block containt%}
+{%include 'navbar.html'%}
+<br>
+<br>
+<br>
+<br>
+
+<div class="card align-item-center bg-dark mx-auto" style="width: 20rem;">
+    <div class="card-body">
+      <h5 class="card-title text-white">SignUp Form</h5>
+      <form method="POST" class=" text-primary">
+        {%load crispy_forms_tags%}
+        {%csrf_token%}
+        {{form|crispy}}
+
+        <br>
+        <br>
+        <button type="submit" class="btn btn-outline-primary align-center">SignUp</button>
+    </form>
+  </div>
+
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <br>
+
+{%endblock%}
+

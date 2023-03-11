@@ -1,0 +1,22 @@
+{%extends 'base.html'%}
+{%block containt%}
+
+{%include 'nav_admin.html'%}
+<br>
+{%for i in read%}
+<div class="card bg-dark text-light">
+    <div class="card-body">
+      <h5 class="card-title">Name : {{i.Name}}</h5>
+      <p class="card-text">Age : {{i.Age}}</p>
+      <p class="card-text">Speciality : {{i.Specialist}}</p>
+      <p class="card-text">Experience : {{i.Experience}} years</p>
+      <a href="{%url 'Update_Doctor' i.id%}" class="card-link btn btn-primary"> Update </a>
+      <a href="{%url 'Delete_Doctor' i.id%}" class="card-link btn btn-primary"> Delete </a>
+      
+    </div>
+    <hr>
+    {%endfor%}
+    {%endblock%}
+
+
+

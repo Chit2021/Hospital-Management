@@ -1,0 +1,24 @@
+{%extends 'base.html'%}
+{%block containt%}
+{%include 'navbar.html'%}
+    
+<form method="POST">
+    {%load crispy_forms_tags%}
+    {%csrf_token%}
+    {{form|crispy}}
+    <button type="submit" class="btn btn-outline-primary"> Call Ambulance </button>
+</form>
+    
+    <h2 class="text-danger"><strong>Emergency Instructions</strong></h2>
+<p class="text-primary">
+    1)Stay on the line with 911 and follow emergency instructions.<br>
+    2)Stay calm and try to keep the patient calm.<br>
+    3)Don’t move a patient who was injured in an automobile accident or fall, or who was found unconscious.<br>
+    4)If the patient is cold, cover them with a blanket.<br>
+    5)Don’t give an injured person anything to eat or drink (unless instructed by the 911 dispatcher).<br>
+    6)Have someone watch for the ambulance and show the crew how to get to the patient.<br>
+    
+
+</p>
+{%include 'footer.html'%}
+{%endblock%}

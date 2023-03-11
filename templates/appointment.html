@@ -1,0 +1,28 @@
+{%extends 'base.html'%}
+{%block containt%}
+{%include 'navbar.html'%}
+
+<form method="POST">
+    <br>
+    {%load crispy_forms_tags%}
+    {%csrf_token%}
+    {{form|crispy}}
+    <br>
+    <button type="submit" class="btn btn-outline-primary">Get Appointment</button>
+    <button type="submit" class="btn btn-outline-primary">Back</button>
+    <br>
+    
+    <br>
+<h2 class="text-primary">Intructions -</h2>
+<p class="text-primary">
+    1)Make a List and Prioritize Your Concerns.<br>
+    2)Take Information with You to the Doctor.<br>
+    3)Consider Bringing a Family Member or Friend to the Doctor's Visit.(Only One Member Allowed with Patient)<br>
+    4)Dont forget to wear mask.<br>
+
+</p>
+
+</form>
+{%include 'footer.html'%}
+
+{%endblock%}

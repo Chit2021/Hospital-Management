@@ -1,0 +1,14 @@
+{%extends 'base.html'%}
+{%block containt%}
+{%include 'navbar.html'%}
+<br><br>
+<div class="card bg-primary text-light" style="width: 28rem;">
+    <div class="card-body" >
+      Dear Patient, Your appointment is confirmed!
+    </div>
+  </div>
+  {%load static%}
+  <img src="{%static 'doctor.gif'%}" class="d-block w-100" alt="...">
+{%include 'footer.html'%}
+
+{%endblock%}

@@ -1,0 +1,16 @@
+{%extends 'base.html'%}
+{%block containt%}
+{%include 'navbar.html'%}
+
+<br><br>
+<div class="card bg-success text-light">
+    <div class="card-body">
+      Dear Patient, Ambulance Will Arrive Shortly.!
+
+    </div>
+  </div>
+
+  {%load static%}
+  <img src="{%static 'ambulance.gif'%}" class="d-block w-100" alt="...">
+{%include 'footer.html'%}
+{%endblock%}

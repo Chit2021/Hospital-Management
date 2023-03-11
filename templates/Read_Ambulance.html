@@ -1,0 +1,20 @@
+{%extends 'base.html'%}
+{%block containt%}
+
+{%include 'nav_admin.html'%}
+<br>
+{%for i in read%}
+<div class="card bg-dark text-light">
+    <div class="card-body">
+      <h5 class="card-title">{{i.Patient_Name}}</h5>
+      <!-- <p class="card-text">{{i.Patient_Age}}</p> -->
+      <!-- <p class="card-text">{{i.Patient_Contact}}</p> -->
+      <p class="card-text">{{i.Location}}</p>
+      <!-- <p class="card-text">{{i.Disease}}</p> -->
+
+
+     
+    </div>
+    <hr>
+    {%endfor%}
+    {%endblock%}

@@ -1,0 +1,27 @@
+{%extends 'base.html'%}
+{%block containt%}
+{%include 'nav_admin.html'%}
+<br><br>
+
+{%for i in read%}
+<div class="card bg-dark text-light">
+    <div class="card-body">
+      <h5 class="card-title">Name of Doctor: {{i.Name}}</h5>
+      <p class="card-text">Age : {{i.Age}}</p>
+      <p class="card-text">Speciality : {{i.Specialist}}</p>
+      <p class="card-text">Experience : {{i.Experience}} years</p>
+              
+</div>
+<hr>
+{%endfor%}
+<div class="card bg-primary text-light">
+    <div class="card-body">
+      New Doctor Added To Your Database.!
+    </div>
+  </div>
+
+ 
+
+{%include 'footer.html'%}
+
+{%endblock%}
